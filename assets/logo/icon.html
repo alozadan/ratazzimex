@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;}
+  .canvas{
+    width:512px;height:512px;
+    background:#2F6B4F;
+    border-radius:96px;
+    position:relative;
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;
+  }
+  svg{position:absolute;top:0;left:0;}
+  .letter{
+    position:relative;
+    font-family:'Manrope',sans-serif;
+    font-weight:800;
+    font-size:214px;
+    color:#F4F6F3;
+    line-height:1;
+    transform:translateY(6px);
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <svg width="512" height="512" viewBox="0 0 512 512">
+      <path d="M 426 256 A 170 170 0 1 0 311 412"
+            fill="none" stroke="#F4F6F3" stroke-width="26"
+            stroke-linecap="round"/>
+      <polygon points="311,412 288,392 336,384" fill="#F4F6F3"/>
+    </svg>
+    <div class="letter">R</div>
+  </div>
+</body>
+</html>

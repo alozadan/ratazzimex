@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;}
+  .canvas{
+    width:900px;height:260px;
+    background:#F4F6F3;
+    display:flex;align-items:center;gap:28px;
+    padding:0 40px;
+    box-sizing:border-box;
+  }
+  .badge{
+    width:140px;height:140px;flex:none;
+    background:#2F6B4F;
+    border-radius:32px;
+    position:relative;
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;
+  }
+  .badge svg{position:absolute;top:0;left:0;}
+  .badge .letter{
+    position:relative;
+    font-family:'Manrope',sans-serif;
+    font-weight:800;
+    font-size:58px;
+    color:#F4F6F3;
+    transform:translateY(2px);
+  }
+  .word{display:flex;flex-direction:column;justify-content:center;}
+  .word .top{
+    font-family:'Manrope',sans-serif;
+    font-weight:800;
+    font-size:56px;
+    letter-spacing:1px;
+    color:#16231C;
+    line-height:1;
+  }
+  .word .bottom{
+    font-family:'Manrope',sans-serif;
+    font-weight:500;
+    font-size:26px;
+    letter-spacing:6px;
+    color:#2F6B4F;
+    line-height:1;
+    margin-top:8px;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="badge">
+      <svg width="140" height="140" viewBox="0 0 512 512">
+        <path d="M 426 256 A 170 170 0 1 0 311 412"
+              fill="none" stroke="#F4F6F3" stroke-width="26"
+              stroke-linecap="round"/>
+        <polygon points="311,412 288,392 336,384" fill="#F4F6F3"/>
+      </svg>
+      <div class="letter">R</div>
+    </div>
+    <div class="word">
+      <div class="top">RATAZZI</div>
+      <div class="bottom">M&Eacute;XICO</div>
+    </div>
+  </div>
+</body>
+</html>
