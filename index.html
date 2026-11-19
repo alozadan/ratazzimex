@@ -81,6 +81,22 @@
 
   html { scroll-behavior: smooth; }
 
+  @media (prefers-reduced-motion: no-preference) {
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .js .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+    .js .reveal-group .reveal:nth-child(1) { transition-delay: 0s; }
+    .js .reveal-group .reveal:nth-child(2) { transition-delay: 0.12s; }
+    .js .reveal-group .reveal:nth-child(3) { transition-delay: 0.24s; }
+    .js .reveal-group .reveal:nth-child(4) { transition-delay: 0.36s; }
+  }
+
   body {
     background: var(--paper);
     color: var(--ink);
@@ -516,25 +532,25 @@
 
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">Destrucción responsable de tecnología corporativa</span>
-    <h1>Disposición final <span class="accent">responsable y segura</span> para el equipo de cómputo que tu empresa ya no usa.</h1>
-    <p class="lede">Recolectamos tu equipo de cómputo corporativo obsoleto y lo llevamos a destrucción responsable — con borrado seguro de la información que contiene, y manejo ambientalmente responsable del equipo.</p>
-    <div class="cta-row">
+    <span class="eyebrow reveal">Destrucción responsable de tecnología corporativa</span>
+    <h1 class="reveal">Disposición final <span class="accent">responsable y segura</span> para el equipo de cómputo que tu empresa ya no usa.</h1>
+    <p class="lede reveal">Recolectamos tu equipo de cómputo corporativo obsoleto y lo llevamos a destrucción responsable — con borrado seguro de la información que contiene, y manejo ambientalmente responsable del equipo.</p>
+    <div class="cta-row reveal">
       <a href="#empresas" class="btn primary">Mi empresa tiene equipo para destrucción</a>
       <a href="#destruccion" class="btn secondary">Cómo funciona la destrucción</a>
     </div>
 
-    <div class="stats">
+    <div class="stats reveal">
       <div class="cell">
-        <div class="num mono">30+</div>
+        <div class="num mono" data-count="30" data-suffix="+">0</div>
         <div class="lbl">años en tecnología corporativa</div>
       </div>
       <div class="cell">
-        <div class="num mono">5,000+</div>
+        <div class="num mono" data-count="5000" data-suffix="+">0</div>
         <div class="lbl">equipos administrados para VW, Audi y Daimler</div>
       </div>
       <div class="cell">
-        <div class="num mono">1993</div>
+        <div class="num mono" data-count="1993">0</div>
         <div class="lbl">el año en que empezamos, con Conexis de México</div>
       </div>
     </div>
@@ -544,11 +560,11 @@
 <section class="block" id="empresas">
   <div class="wrap">
     <span class="kicker">Para empresas</span>
-    <h2>¿Tu empresa renueva equipo cada año o dos? Nosotros nos lo llevamos.</h2>
-    <p class="intro">Las grandes corporaciones necesitan deshacerse de su tecnología obsoleta de forma responsable y segura. Con Ratazzi México, nosotros coordinamos y ejecutamos todo el proceso — con cobertura en varias ciudades de México.</p>
+    <h2 class="reveal">¿Tu empresa renueva equipo cada año o dos? Nosotros nos lo llevamos.</h2>
+    <p class="intro reveal">Las grandes corporaciones necesitan deshacerse de su tecnología obsoleta de forma responsable y segura. Con Ratazzi México, nosotros coordinamos y ejecutamos todo el proceso — con cobertura en varias ciudades de México.</p>
 
-    <div class="audience-grid">
-      <div class="audience-card">
+    <div class="audience-grid reveal-group">
+      <div class="audience-card reveal">
         <div class="icon">🏢</div>
         <h3>Recolección coordinada</h3>
         <p>Laptops, workstations, monitores y equipo de cómputo en general que tu empresa ya dio de baja.</p>
@@ -558,7 +574,7 @@
           <li>Manejo responsable del equipo recolectado</li>
         </ul>
       </div>
-      <div class="audience-card">
+      <div class="audience-card reveal">
         <div class="icon">🤝</div>
         <h3>Respaldo real</h3>
         <p>No somos un intermediario improvisado — detrás de Ratazzi México hay más de tres décadas administrando tecnología para marcas globales.</p>
@@ -575,16 +591,16 @@
 <section class="block" id="destruccion">
   <div class="wrap">
     <span class="kicker">Destrucción responsable</span>
-    <h2>No solo lo desechamos. Lo destruimos de forma responsable y segura.</h2>
-    <p class="intro">Entregarnos tu equipo no es tirarlo a la basura. Es un proceso con dos partes: la destrucción física del equipo, y el borrado seguro de la información que contiene — con manejo ambientalmente responsable en todo momento.</p>
+    <h2 class="reveal">No solo lo desechamos. Lo destruimos de forma responsable y segura.</h2>
+    <p class="intro reveal">Entregarnos tu equipo no es tirarlo a la basura. Es un proceso con dos partes: la destrucción física del equipo, y el borrado seguro de la información que contiene — con manejo ambientalmente responsable en todo momento.</p>
 
-    <div class="audience-grid">
-      <div class="audience-card">
+    <div class="audience-grid reveal-group">
+      <div class="audience-card reveal">
         <div class="icon">🔒</div>
         <h3>Borrado seguro de datos</h3>
         <p>Antes de cualquier destrucción física, la información de cada equipo se elimina de forma segura — para que tu empresa entregue tranquila, sin riesgo de que datos sensibles queden expuestos.</p>
       </div>
-      <div class="audience-card">
+      <div class="audience-card reveal">
         <div class="icon">♻️</div>
         <h3>Disposición final responsable</h3>
         <p>El equipo se procesa con manejo ambientalmente responsable, no con disposición improvisada. Estamos en proceso de certificación oficial para disposición final responsable, para respaldar esto formalmente.</p>
@@ -596,25 +612,25 @@
 <section class="block">
   <div class="wrap">
     <span class="kicker">Cómo funciona</span>
-    <h2>Un proceso simple, de principio a fin.</h2>
+    <h2 class="reveal">Un proceso simple, de principio a fin.</h2>
 
-    <div class="steps">
-      <div class="step">
+    <div class="steps reveal-group">
+      <div class="step reveal">
         <div class="num mono">1</div>
         <h3>Nos contactas</h3>
         <p>Nos cuentas qué equipo tiene tu empresa para destrucción responsable.</p>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <div class="num mono">2</div>
         <h3>Evaluamos</h3>
         <p>Revisamos cantidad, estado y tipo de equipo para coordinar la recolección.</p>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <div class="num mono">3</div>
         <h3>Recolectamos</h3>
         <p>Coordinamos la logística y recolectamos el equipo directamente en tu sitio.</p>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <div class="num mono">4</div>
         <h3>Destruimos y confirmamos</h3>
         <p>Borramos la información, destruimos el equipo de forma responsable, y te confirmamos que todo quedó resuelto.</p>
@@ -626,14 +642,14 @@
 <section class="block" id="nosotros">
   <div class="wrap">
     <span class="kicker">Quiénes somos</span>
-    <h2>Tecnología corporativa es lo que sabemos hacer.</h2>
+    <h2 class="reveal">Tecnología corporativa es lo que sabemos hacer.</h2>
 
-    <div class="about-grid">
-      <div>
+    <div class="about-grid reveal-group">
+      <div class="reveal">
         <p>Ratazzi México nace de una trayectoria real en tecnología corporativa: desde <strong>1993</strong>, administramos y arrendamos equipo de cómputo para algunas de las marcas más grandes del mundo — <strong>Volkswagen, Audi y Daimler</strong>, con más de <strong>5,000 equipos</strong> en contratos de varios años.</p>
         <p>Hoy aplicamos esa misma experiencia a la destrucción responsable del equipo de cómputo corporativo: lo recolectamos directamente de las empresas, y nos encargamos de que su destino final — y el de la información que contiene — se maneje de forma segura y responsable.</p>
       </div>
-      <div class="parent-card">
+      <div class="parent-card reveal">
         <span class="kicker">Respaldo corporativo</span>
         <h3>Triara Co.</h3>
         <p>Ratazzi México opera respaldada por Triara Co., con sede en Houston, Texas — <a href="https://triaraco.com" target="_blank" rel="noopener">triaraco.com</a>.</p>
@@ -645,10 +661,10 @@
 <section class="block" id="contacto" style="border-bottom:none;">
   <div class="wrap">
     <span class="kicker">Contacto</span>
-    <h2>¿Tu empresa tiene equipo para destrucción responsable?</h2>
+    <h2 class="reveal">¿Tu empresa tiene equipo para destrucción responsable?</h2>
 
-    <div class="contact-grid">
-      <ul class="contact-list">
+    <div class="contact-grid reveal-group">
+      <ul class="contact-list reveal">
         <li>
           <span class="k">Correo</span>
           <span class="v"><a href="mailto:contacto@ratazzimex.com">contacto@ratazzimex.com</a></span>
@@ -667,7 +683,7 @@
         </li>
       </ul>
 
-      <form onsubmit="event.preventDefault(); window.location.href='mailto:contacto@ratazzimex.com?subject=' + encodeURIComponent('Contacto desde ratazzimex.com: ' + this.nombre.value) + '&body=' + encodeURIComponent(this.mensaje.value + '\n\nContacto: ' + this.nombre.value + ' / ' + this.correo.value);">
+      <form class="reveal" onsubmit="event.preventDefault(); window.location.href='mailto:contacto@ratazzimex.com?subject=' + encodeURIComponent('Contacto desde ratazzimex.com: ' + this.nombre.value) + '&body=' + encodeURIComponent(this.mensaje.value + '\n\nContacto: ' + this.nombre.value + ' / ' + this.correo.value);">
         <input type="text" name="nombre" placeholder="Nombre" required>
         <input type="email" name="correo" placeholder="Correo" required>
         <select name="tipo">
@@ -688,6 +704,72 @@
     <span>ratazzimex.com</span>
   </div>
 </footer>
+
+<script>
+(function () {
+  document.documentElement.classList.add('js');
+
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('.reveal');
+  var counters = document.querySelectorAll('[data-count]');
+
+  function showAll() {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  function finalizeCounter(el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    el.textContent = target.toLocaleString('es-MX') + suffix;
+  }
+
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var duration = 1300;
+    var start = null;
+
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(eased * target).toLocaleString('es-MX') + suffix;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        finalizeCounter(el);
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    showAll();
+    counters.forEach(finalizeCounter);
+    return;
+  }
+
+  var revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(function (el) { revealObserver.observe(el); });
+
+  var countObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        countObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  counters.forEach(function (el) { countObserver.observe(el); });
+})();
+</script>
 
 </body>
 </html>
